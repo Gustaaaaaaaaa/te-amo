@@ -1,0 +1,132 @@
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+    overflow: auto;
+    cursor: pointer;
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Outros estilos (como antes) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fafafa; /* Fundo quase branco */
+    color: #333;
+    text-align: center;
+    padding: 0;
+}
+
+header {
+    background-color: #ff9a9e;
+    padding: 20px 0;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: white;
+    animation: pulsar 1s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes pulsar {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.7);
+    }
+}
+
+.galeria {
+    padding: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly; /* Deixa as imagens mais próximas */
+    gap: 10px; /* Reduz o espaçamento entre as imagens */
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.texto-romantico {
+    margin: 40px 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background-color: #ff9a9e;
+    padding: 20px 0;
+    color: white;
+}
+
+footer p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Efeito de Interação no Título */
+h1:hover {
+    animation: shake 0.5s ease-in-out forwards;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0); }
+}
+
+/* Efeito de zoom nas imagens */
+.gallery img {
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comemoração de Aniversário de Namoro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Feliz Aniversário de Namoro, meu amor! 💖</h1>
+    </header>
+
+    <section class="galeria">
+        <h2>Algumas Memórias Juntos</h2>
+        <div class="gallery">
+            <img src="Imagem 1.jpg" alt="Foto 1" onclick="abrirImagem(this)">
+            <img src="Imagem 2.jpg" alt="Foto 2" onclick="abrirImagem(this)">
+            <img src="Imagem 3.jpg" alt="Foto 3" onclick="abrirImagem(this)">
+            <img src="Imagem 4.jpg" alt="Foto 4" onclick="abrirImagem(this)">
+        </div>
+    </section>
+
+    <section class="texto-romantico">
+        <p>Te amo pra caralho meu amor, obrigado por tudo que estamos vivendo, sei que não foi fácil tudo que aconteceu mas superamos isso. Hoje tenho certeza que somos o casal mais feliz dessa porra de mundo, feliz nosso dia 25. Te amo muito ❤️</p>
+    </section>
+
+    <footer>
+        <p>Feito com ❤️ para você!</p>
+    </footer>
+
+    <!-- Modal para exibir a imagem em maior tamanho -->
+    <div id="modal" class="modal" onclick="fecharImagem()">
+        <img id="imagemModal" class="modal-content" alt="Imagem em maior tamanho">
+    </div>
+
+    <script>
+        // Função para abrir a imagem no modal
+        function abrirImagem(img) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('imagemModal');
+            
+            // Definindo o src da imagem maior
+            modalImg.src = img.src;
+            
+            // Exibindo o modal
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal ao clicar fora da imagem
+        function fecharImagem() {
+            const modal = document.getElementById('modal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
